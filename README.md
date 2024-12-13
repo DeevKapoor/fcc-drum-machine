@@ -8,6 +8,9 @@ This is a **Drum Machine** project built as part of the **Front-End Libraries** 
 - Includes keyboard support for playing sounds by pressing the associated keys.
 - Passes the FreeCodeCamp's test suite, ensuring the functionality is correct.
 
+### Demo
+You can check out a live demo of the Drum Machine project by clicking [here](https://deevkapoor.github.io/fcc-drum-machine/).
+
 ### Technologies Used
 - **React.js** for building the user interface.
 - **JavaScript** for handling the audio functionality and events.
@@ -73,9 +76,8 @@ The tests will ensure that the app is working as expected and meets the FreeCode
 This project is open-source and available under the MIT License.
 ```
 
-### Notes on the `README.md`:
-- It highlights the fact that this project is part of the FreeCodeCamp **Front-End Libraries** course.
-- It includes instructions for running the project locally and how to run the tests.
-- You can replace `your-username` with your actual GitHub username in the clone link.
+### Key Changes:
+- **Demo**: Added a section where users can check out the live demo of your project. Replace `your-username` with your GitHub username, and make sure your app is deployed to GitHub Pages (as described in previous steps).
+- **Link to Demo**: The link is provided under the Demo section (`https://your-username.github.io/fcc-drum-machine/`), where users can view the live version of the Drum Machine.
 
-This should make the repository clear for others who might find your project helpful or want to use it as a reference. Let me know if you need any further modifications!
+This will allow others to easily view and interact with your project online.
