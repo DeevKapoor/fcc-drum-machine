@@ -1,11 +1,9 @@
-/* Global reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Base styles */
 body {
   font-family: "Poppins", lora;
   background: #00c6ff;
@@ -38,8 +36,6 @@ body {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
-/* Drum pads container */
 .drum-pads {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -100,7 +96,7 @@ audio {
   }
 }
 
-/* Background particles */
+
 #drum-machine::before {
   content: "";
   position: absolute;
@@ -114,7 +110,6 @@ audio {
   pointer-events: none;
 }
 
-/* Micro-interaction effects (Sound Waves) */
 @keyframes wave {
   0% {
     transform: scale(1);
