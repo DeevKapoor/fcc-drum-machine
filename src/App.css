@@ -1,0 +1,144 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: "Poppins", lora;
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to right, #00c6ff, #0072ff);
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#drum-machine {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+#display {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Drum pads container */
+.drum-pads {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.drum-pad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff5e57;
+  color: white;
+  padding: 30px;
+  font-size: 30px;
+  border-radius: 15px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.drum-pad:hover {
+  transform: scale(1.1);
+  background-color: #ff3d36;
+}
+
+.drum-pad:active {
+  transform: scale(0.9);
+  background-color: #d52c2b;
+}
+
+.drum-label {
+  position: relative;
+  z-index: 1;
+}
+
+audio {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  #drum-machine {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #display {
+    font-size: 28px;
+  }
+
+  .drum-pads {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .drum-pad {
+    font-size: 28px;
+    padding: 25px;
+  }
+}
+
+/* Background particles */
+#drum-machine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://cdn.pixabay.com/photo/2015/09/18/18/13/abstract-945623_960_720.jpg") no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Micro-interaction effects (Sound Waves) */
+@keyframes wave {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.drum-pad:active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: wave 0.5s ease-out;
+  transform: translate(-50%, -50%);
+}
