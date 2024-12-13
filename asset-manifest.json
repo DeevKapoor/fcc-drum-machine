@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fcc-drum-machine/static/css/main.c30c962a.css",
+    "main.js": "/fcc-drum-machine/static/js/main.e6e95221.js",
+    "static/js/488.fad4af8b.chunk.js": "/fcc-drum-machine/static/js/488.fad4af8b.chunk.js",
+    "index.html": "/fcc-drum-machine/index.html",
+    "main.c30c962a.css.map": "/fcc-drum-machine/static/css/main.c30c962a.css.map",
+    "main.e6e95221.js.map": "/fcc-drum-machine/static/js/main.e6e95221.js.map",
+    "488.fad4af8b.chunk.js.map": "/fcc-drum-machine/static/js/488.fad4af8b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c30c962a.css",
+    "static/js/main.e6e95221.js"
+  ]
+}
