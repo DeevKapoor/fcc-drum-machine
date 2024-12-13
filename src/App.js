@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 
 const App = () => {
-  // Define audio clips with public URLs
+  
   const audioClips = [
     { id: 'Q', src: 'https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-1.mp3', label: 'Heater 1' },
     { id: 'W', src: 'https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-2.mp3', label: 'Heater 2' },
@@ -16,17 +16,17 @@ const App = () => {
   ];
 
   const [displayText, setDisplayText] = useState('');
-  const [activePad, setActivePad] = useState(null); // Track the active drum pad
+  const [activePad, setActivePad] = useState(null);
   const audioRefs = useRef({});
 
-  // Play audio and update the display
+
   const playAudio = (clip) => {
-    // Pause all the audio clips before playing the new one, but only if they are not already playing.
+   
     Object.keys(audioRefs.current).forEach((key) => {
       const audio = audioRefs.current[key];
       if (audio && !audio.paused) {
         audio.pause();
-        audio.currentTime = 0; // Reset audio to the start
+        audio.currentTime = 0; 
       }
     });
 
@@ -36,11 +36,11 @@ const App = () => {
         console.error('Error playing audio:', error);
       });
       setDisplayText(clip.label);
-      setActivePad(clip.id); // Set active pad when audio is played
+      setActivePad(clip.id);
     }
   };
 
-  // Handle key press events for playing audio
+  
   const handleKeyPress = (e) => {
     const key = e.key.toUpperCase();
     const clip = audioClips.find((clip) => clip.id === key);
@@ -50,10 +50,10 @@ const App = () => {
   };
 
   useEffect(() => {
-    // Set up the event listener for key presses
+    
     document.addEventListener('keydown', handleKeyPress);
 
-    // Clean up the event listener when the component is unmounted
+    
     return () => {
       document.removeEventListener('keydown', handleKeyPress);
     };
@@ -66,12 +66,12 @@ const App = () => {
         {audioClips.map((clip) => (
           <div
             key={clip.id}
-            className={`drum-pad ${activePad === clip.id ? 'active' : ''}`} // Add active class for visual feedback
+            className={`drum-pad ${activePad === clip.id ? 'active' : ''}`} 
             id={clip.id}
             onClick={() => playAudio(clip)}
             tabIndex={0}
             role="button"
-            aria-label={clip.label} // Added for better accessibility
+            aria-label={clip.label} 
           >
             {clip.id}
             <audio
