@@ -76,8 +76,5 @@ The tests will ensure that the app is working as expected and meets the FreeCode
 This project is open-source and available under the MIT License.
 ```
 
-### Key Changes:
-- **Demo**: Added a section where users can check out the live demo of your project. Replace `your-username` with your GitHub username, and make sure your app is deployed to GitHub Pages (as described in previous steps).
-- **Link to Demo**: The link is provided under the Demo section (`https://your-username.github.io/fcc-drum-machine/`), where users can view the live version of the Drum Machine.
 
-This will allow others to easily view and interact with your project online.
+
